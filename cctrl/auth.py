@@ -59,6 +59,7 @@ def read_tokenfile():
         except ValueError:
             token = None
         token_file.close()
+    token = os.environ.get('CLOUDCONTROL_TOKEN', token)
     return token
 
 
